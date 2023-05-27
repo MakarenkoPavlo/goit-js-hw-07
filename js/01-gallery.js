@@ -4,7 +4,6 @@ import { galleryItems } from './gallery-items.js';
 
 const gallery = document.querySelector('.gallery');
 
-// Создание и рендер разметки по массиву данных galleryItems
 const createGalleryItem = ({ preview, original, description }) => {
   const galleryItem = document.createElement('li');
   galleryItem.classList.add('gallery__item');
@@ -32,7 +31,7 @@ const renderGallery = (items) => {
 
 renderGallery(galleryItems);
 
-// Реализация делегирования на ul.gallery и получение url большого изображения
+
 const openModal = event => {
   event.preventDefault();
 
@@ -45,7 +44,7 @@ const openModal = event => {
 
   instance.show();
 
-  // Закрытие модального окна по нажатию клавиши Escape
+ 
   const handleKeyPress = event => {
     if (event.code === 'Escape') {
       instance.close();
